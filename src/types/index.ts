@@ -23,6 +23,15 @@ export interface IBuyer {
     address: string;
 }
 
+export type TBuyerErrors = Partial<Record<keyof IBuyer, string>>;
+
+export interface IBuyerState {
+    payment: TPayment | null;
+    email: string;
+    phone: string;
+    address: string;
+}
+
 export interface IProductsResponse {
     total: number;
     items: IProduct[];
